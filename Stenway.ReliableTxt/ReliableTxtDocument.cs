@@ -109,5 +109,10 @@ namespace Stenway.ReliableTxt
 			byte[] bytes = File.ReadAllBytes(filePath);
 			return new ReliableTxtDocument(bytes);
 		}
+		
+		public static void Save(String content, ReliableTxtEncoding encoding, String filePath)
+		{
+			new ReliableTxtDocument(content, encoding).Save(filePath);
+		}
 	}
 }
